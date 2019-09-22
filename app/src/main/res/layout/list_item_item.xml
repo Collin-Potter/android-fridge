@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="clickListener"
+            type="android.view.View.OnClickListener"/>
+        <variable
+            name="item"
+            type="com.example.android_fridge.data.Item" />
+    </data>
+    <com.example.android_fridge.views.MaskedCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="26dp"
+        android:onClick="@{clickListener}"
+        app:cardElevation="2dp"
+        app:cardPreventCornerOverlap="false"
+        app:shapeAppearanceOverlay="@style/ShapeAppearance.Fridge.Card">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/item_item_image"
+                android:layout_width="0dp"
+                android:layout_height="95dp"
+                android:contentDescription="Picture of some item"
+                android:scaleType="centerCrop"
+                app:imageFromUrl="@{item.imageUrl}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:id="@+id/item_item_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:layout_marginTop="16dp"
+                android:text="@{item.name}"
+                android:textAppearance="?attr/textAppearanceListItem"
+                android:gravity="center_horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/item_item_image"
+                app:layout_constraintBottom_toBottomOf="parent"
+                tools:text="Tomato" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.example.android_fridge.views.MaskedCardView>
+</layout>
