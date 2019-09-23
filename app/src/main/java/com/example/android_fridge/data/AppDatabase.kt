@@ -10,8 +10,9 @@ import androidx.work.WorkManager
 import com.example.android_fridge.utilities.DATABASE_NAME
 import com.example.android_fridge.workers.SeedDatabaseWorker
 
-@Database(entities = [Item::class], version = 1, exportSchema = false)
+@Database(entities = [Item::class, FridgeStock::class], version = 2, exportSchema = false)
 abstract class AppDatabase : RoomDatabase() {
+    abstract fun fridgeStockDao(): FridgeStockDao
     abstract fun itemDao(): ItemDao
 
     companion object {
@@ -35,6 +36,7 @@ abstract class AppDatabase : RoomDatabase() {
                         WorkManager.getInstance(context).enqueue(request)
                     }
                 })
+                .fallbackToDestructiveMigration()
                 .build()
         }
     }

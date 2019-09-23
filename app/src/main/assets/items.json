@@ -1,8 +1,50 @@
 [
   {
-    "itemId": "apple",
-    "name": "Apple",
+    "itemId": "apples",
+    "name": "Apples",
     "description": "An apple is a sweet, edible fruit produced by an apple tree (Malus pumila). Apple trees are cultivated worldwide, and are the most widely grown species in the genus Malus. The tree originated in Central Asia, where its wild ancestor, Malus sieversii, is still found today. Apples have been grown for thousands of years in Asia and Europe, and were brought to North America by European colonists. Apples have religious and mythological significance in many cultures, including Norse, Greek and European Christian traditions.<br><br>Apple trees are large if grown from seed. Generally apple cultivars are propagated by grafting onto rootstocks, which control the size of the resulting tree. There are more than 7,500 known cultivars of apples, resulting in a range of desired characteristics. Different cultivars are bred for various tastes and uses, including cooking, eating raw and cider production. Trees and fruit are prone to a number of fungal, bacterial and pest problems, which can be controlled by a number of organic and non-organic means. In 2010, the fruit's genome was sequenced as part of research on disease control and selective breeding in apple production.<br><br>Worldwide production of apples in 2014 was 84.6 million tonnes, with China accounting for 48% of the total.<br><br>(From <a href=\"https://en.wikipedia.org/wiki/Apple\">Wikipedia</a>)",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/55/Apple_orchard_in_Tasmania.jpg"
+  },
+  {
+    "itemId": "eggs",
+    "name": "Eggs",
+    "description": "Some eggs are laid by female animals of many different species, including birds, reptiles, amphibians, mammals, and fish, and have been eaten by humans for thousands of years.[1] Bird and reptile eggs consist of a protective eggshell, albumen (egg white), and vitellus (egg yolk), contained within various thin membranes. The most commonly consumed eggs are chicken eggs. Other poultry eggs including those of duck and quail also are eaten. Fish eggs are called roe and caviar.",
+    "imageUrl": "https://img.webmd.com/dtmcms/live/webmd/consumer_assets/site_images/articles/health_tools/eggs_slideshow/getty_photo_of_eggs_in_carton.jpg"
+  },
+  {
+    "itemId": "chicken",
+    "name": "Chicken",
+    "description": "Chicken is the most common type of poultry in the world.[1] Owing to the relative ease and low cost of raising them in comparison to animals such as cattle or hogs, chickens have become prevalent throughout the cuisine of cultures around the world, and their meat has been variously adapted to regional tastes.\n\nChicken can be prepared in a vast range of ways, including baking, grilling, barbecuing, frying, and boiling, among many others, depending on its purpose. Since the latter half of the 20th century, prepared chicken has become a staple of fast food. Chicken is sometimes cited as being more healthful than red meat, with lower concentrations of cholesterol and saturated fat.[2]",
+    "imageUrl": "https://images-na.ssl-images-amazon.com/images/I/71PdOGP4BDL._SY355_.jpg"
+  },
+  {
+    "itemId": "turkey",
+    "name": "Turkey",
+    "description": "Turkey meat, commonly referred to as just turkey, is the meat from turkeys, typically domesticated turkeys. It is a popular poultry dish, especially in North America, where it is traditionally consumed as part of culturally significant events such as Thanksgiving and Christmas, as well as in standard cuisine.",
+    "imageUrl": "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2010/10/4/0/FNM_110110-Cover-008-no-dial_s4x3.jpg.rend.hgtvcom.826.620.suffix/1382539588774.jpeg"
+  },
+  {
+    "itemId": "steak",
+    "name": "Steak",
+    "description": "Mmmm steak...",
+    "imageUrl": "https://www.omahasteaks.com/blog/wp-content/uploads/2019/09/Grilling-Flat-Irons-BP.jpg"
+  },
+  {
+    "itemId": "salmon",
+    "name": "Salmon",
+    "description": "Salmon...",
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0761/2187/products/BjnRt43_large.jpg?v=1530633095"
+  },
+  {
+    "itemId": "tuna",
+    "name": "Tuna",
+    "description": "Tuna...",
+    "imageUrl": "https://previews.123rf.com/images/foodandmore/foodandmore1605/foodandmore160500047/56707954-still-life-of-slab-of-raw-tuna-fish-on-white-background-garnished-with-black-peppercorns-and-sprig-o.jpg"
+  },
+  {
+    "itemId": "cottage_cheese",
+    "name": "Cottage Cheese",
+    "description": "Cottage Cheese...",
+    "imageUrl": "https://housewifehowtos.com/wp-content/uploads/2013/08/Homemade-Cottage-Cheese-in-Wood-Bowl-on-tabletop.jpg"
   }
 ]
