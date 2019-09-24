@@ -20,6 +20,7 @@ import com.example.android_fridge.utilities.InjectorUtils
 import com.example.android_fridge.viewmodels.ItemDetailViewModel
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.snackbar.Snackbar
+import kotlinx.android.synthetic.main.fragment_item_detail.*
 
 class ItemDetailFragment : Fragment() {
 
@@ -43,8 +44,19 @@ class ItemDetailFragment : Fragment() {
                 override fun add(item: Item?) {
                     item?.let {
                         hideAppBarFab(fab)
+                        showAppBarFab(fab_stocked)
                         itemDetailViewModel.addItemToFridge()
                         Snackbar.make(root, "Added item to fridge", Snackbar.LENGTH_LONG)
+                            .show()
+                    }
+                }
+
+                override fun remove(item: Item?) {
+                    item?.let {
+                        hideAppBarFab(fab_stocked)
+                        showAppBarFab(fab)
+                        itemDetailViewModel.removeItemFromFridge()
+                        Snackbar.make(root, "Removed item from fridge", Snackbar.LENGTH_LONG)
                             .show()
                     }
                 }
@@ -120,7 +132,15 @@ class ItemDetailFragment : Fragment() {
         fab.hide()
     }
 
+    private fun showAppBarFab(fab: FloatingActionButton) {
+        val params = fab.layoutParams as CoordinatorLayout.LayoutParams
+        val behavior = params.behavior as FloatingActionButton.Behavior
+        behavior.isAutoHideEnabled = false
+        fab.show()
+    }
+
     interface Callback {
         fun add(item: Item?)
+        fun remove(item: Item?)
     }
 }

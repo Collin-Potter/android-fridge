@@ -29,6 +29,15 @@ fun bindIsGone(view: FloatingActionButton, isGone: Boolean?) {
     }
 }
 
+@BindingAdapter("inFridge")
+fun bindInFridge(view: FloatingActionButton, inFridge: Boolean?) {
+    if (inFridge == null || inFridge) {
+        view.setImageResource(R.drawable.ic_remove)
+    } else {
+        view.setImageResource(R.drawable.ic_plus)
+    }
+}
+
 @BindingAdapter("renderHtml")
 fun bindRenderHtml(view: TextView, description: String?) {
     if (description != null) {

@@ -11,6 +11,9 @@ interface FridgeStockDao {
     @Query("SELECT EXISTS(SELECT 1 FROM fridge_stock WHERE item_id = :itemId LIMIT 1)")
     fun isStocked(itemId: String): LiveData<Boolean>
 
+    @Query("SELECT * FROM fridge_stock WHERE item_id = :itemId LIMIT 1")
+    suspend fun getFridgeStockByItemId(itemId: String): FridgeStock
+
     @Transaction
     @Query("SELECT * FROM items WHERE id IN (SELECT DISTINCT(item_id) FROM fridge_stock)")
     fun getStockedItems(): LiveData<List<ItemAndFridgeStock>>

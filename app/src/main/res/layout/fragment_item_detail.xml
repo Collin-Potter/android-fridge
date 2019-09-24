@@ -141,9 +141,25 @@
             android:onClick="@{() -> callback.add(viewModel.item)}"
             android:tint="@android:color/white"
             app:shapeAppearance="@style/ShapeAppearance.Fridge.FAB"
+            app:isGone="@{viewModel.isStocked}"
             app:layout_anchor="@id/appbar"
             app:layout_anchorGravity="bottom|end"
-            app:srcCompat="@drawable/ic_plus" />
+            app:srcCompat="@drawable/ic_plus"/>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_stocked"
+            style="@style/Widget.MaterialComponents.FloatingActionButton"
+            android:backgroundTint="@color/colorAccent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:onClick="@{() -> callback.remove(viewModel.item)}"
+            android:tint="@android:color/white"
+            app:shapeAppearance="@style/ShapeAppearance.Fridge.FAB"
+            app:isGone="@{!viewModel.isStocked}"
+            app:layout_anchor="@id/appbar"
+            app:layout_anchorGravity="bottom|end"
+            app:srcCompat="@drawable/ic_remove"/>
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 

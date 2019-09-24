@@ -13,6 +13,9 @@ class FridgeStockRepository private constructor(
         fridgeStockDao.deleteFridgeStock(fridgeStock)
     }
 
+    suspend fun getStockedItemById(itemId: String) =
+        fridgeStockDao.getFridgeStockByItemId(itemId)
+
     fun isStocked(itemId: String) =
         fridgeStockDao.isStocked(itemId)
 

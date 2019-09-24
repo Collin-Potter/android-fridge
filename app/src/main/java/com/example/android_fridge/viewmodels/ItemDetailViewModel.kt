@@ -12,11 +12,19 @@ class ItemDetailViewModel(
     private val itemId: String
 ) : ViewModel() {
 
+    val isStocked = fridgeStockRepository.isStocked(itemId)
     val item = itemRepository.getItem(itemId)
 
     fun addItemToFridge() {
         viewModelScope.launch {
             fridgeStockRepository.createFridgeStock(itemId)
+        }
+    }
+
+    fun removeItemFromFridge() {
+        viewModelScope.launch {
+            val tempStock = fridgeStockRepository.getStockedItemById(itemId)
+            fridgeStockRepository.removeFridgeStock(tempStock)
         }
     }
 }
