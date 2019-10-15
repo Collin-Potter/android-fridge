@@ -1,6 +1,10 @@
 package com.example.android_fridge.data
 
+import com.example.android_fridge.services.ApiFactory
+
 class ItemRepository private constructor(private val itemDao: ItemDao) {
+
+//    fun getFoodOptions() = ApiFactory.foodsApi.getFoodOptions()
 
     fun getItems() = itemDao.getItems()
 

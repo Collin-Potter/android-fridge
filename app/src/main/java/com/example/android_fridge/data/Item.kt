@@ -11,3 +11,7 @@ data class Item (
     val description: String,
     val imageUrl: String = ""
 )
+
+data class ItemResponse(
+    val results: List<Item>
+)

@@ -40,6 +40,10 @@ class ItemListFragment : Fragment() {
         viewModel.items.observe(viewLifecycleOwner) { items ->
             adapter.submitList(items)
         }
+
+//        val response = viewModel.response.getCompleted()
+
+//        println(response)
     }
 
 }
